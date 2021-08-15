@@ -29,7 +29,7 @@ const HomeRoutes = ({route}) => {
 
   const userId = '0';
   const name = "Bryan choi";
-  const imageUri = "https://wf-test-vd.s3.ap-northeast-2.amazonaws.com/KakaoTalk_20210420_115355441.jpg";
+  const imageUri = "https://drive.google.com/uc?id=13d_h-NMu03WCqwiKzk9lejtv1P3KSNWb";
   const followType = "i";
 
   const onProfilePress = () => {
