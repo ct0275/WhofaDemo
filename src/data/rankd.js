@@ -8,7 +8,7 @@ export default [
         name: '지수',
       },
       videoUri: 'http://monweb.tving.com/trans/ktl.mp4',
-      thumbnailUri : 'http://file3.instiz.net/data/cached_img/upload/2019/07/31/14/311006a1b78423ecf1fc1e70bfd68530.jpg',
+      thumbnailUri : 'https://file3.instiz.net/data/cached_img/upload/2019/07/31/14/311006a1b78423ecf1fc1e70bfd68530.jpg',
       caption: 'Kill this love #Jisso #DailyRank',
       likesCount: 321,
       postedAt: '2 days ago'
