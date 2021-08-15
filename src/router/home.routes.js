@@ -58,7 +58,7 @@ const HomeRoutes = ({route}) => {
               ),
               headerRight: () => (
                 <TouchableOpacity onPress={onProfilePress}>
-              <ProfilePicture uri={imageUri} size={50} />
+              <ProfilePicture uri={imageUri} size={40} />
               <Badge status="error" value="+99" containerStyle={{ position: 'absolute', top: 5, right: 0 }} />
             </TouchableOpacity>
           ),
