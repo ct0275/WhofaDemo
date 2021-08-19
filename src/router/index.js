@@ -13,6 +13,8 @@ import CommentScreen from "../screens/CommentScreen";
 import FollowScreen from "../screens/FollowScreen";
 import LongFormScreen from "../screens/LongFormScreen";
 
+import {Platform} from 'react-native';
+
 const RootStack = createStackNavigator();
 
 const Router = () => {
@@ -41,7 +43,16 @@ const Router = () => {
           name={"Profile"}
           component={ProfileScreen}
           options={{
-            headerShown: false,
+            ...Platform.select({
+              ios: {
+                headerShown: true,
+                title: "프로파일",
+              },
+              android: {
+                headerShown: false,
+              },
+            }),
+
           }}
         />
         <RootStack.Screen
@@ -57,6 +68,7 @@ const Router = () => {
           component={MyVideoScreen}
           options={{
             headerShown: false,
+            title: "내영상",
           }}
         />
         <RootStack.Screen

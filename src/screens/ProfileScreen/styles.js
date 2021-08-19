@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     // backgroundColor: "pink",
   },
   profilePicture: {
-    marginTop: 10,
+    // marginTop: 10,
   },
   middleProfile: {
     alignItems: 'flex-start',
-    marginTop: 10,
+    marginTop: 20,
     // height: '25%',
     // backgroundColor: "yellow",
   },
