@@ -8,7 +8,8 @@ import { Badge } from 'react-native-elements';
 
 import HomeScreen from "../screens/HomeScreen";
 import RankScreen from "../screens/RankScreen";
-import SearchScreen from "../screens/SearchScreen";
+// import SearchScreen from "../screens/SearchScreen";
+import SearchScreen from "../screens/SearchScreen2";
 import CollectionScreen from "../screens/CollectionScreen";
 import PostScreen from "../screens/CreatePostScreen";
 
