@@ -19,8 +19,8 @@ const Story = (props) => {
   const navigation = useNavigation();
 
   const onPress = () => {
-    console.log("userId : " + id);
-    navigation.navigate("Profile", { userId: id, imageUri: imageUri });
+    console.log("components > Story > userId : " + id + " / userName : " + name);
+    navigation.navigate("Profile", { userId: id, userName: name, imageUri: imageUri });
   }
 
   console.log(imageUri);

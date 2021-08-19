@@ -9,16 +9,17 @@ import styles from './styles';
  
 const ProfileScreen = ({route}) => {
 
-  console.log("ProfileScreen > route.name : " + route.name + " / userId : " + userId + " / imageUri : " + imageUri + " / name : " + name );
+  const { userId, userName, imageUri } = route.params;
 
-  const { userId, imageUri, name } = route.params;
+  console.log("ProfileScreen > route.name : " + route.name + " / userId : " + userId + " / imageUri : " + imageUri + " / name : " + userName );
+
 
   const navigation = useNavigation();
 
   const onDisplayPress = (wuTo, followType) => {
 
     console.log("ProfileScreen > wuTo : " + wuTo + " / followType : " + followType);
-    navigation.navigate(wuTo, { userId: userId, followType: followType });
+    navigation.navigate(wuTo, { userId: userId, userName: userName, followType: followType });
   }
 
   const intro = "서울에서 기타, 건반 그리고 노래를 합니다. \n콜라보환영!! \n매주 토요일 홍대제비다방 8시!!";
@@ -36,7 +37,7 @@ const ProfileScreen = ({route}) => {
         <ProfilePicture uri={imageUri} size={300} />
         </View>
         <View style={styles.middleProfile}>
-          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.name}>{userName}</Text>
           <Text style={styles.intro}>{intro}</Text>
           <Text style={styles.hashtag}>{hashtag}</Text>
       </View>

@@ -12,21 +12,21 @@ import data from '../../data/mycoin';
 import styles from './styles';
  
 const MyCoinScreen = ({route}) => {
-  // const { userId, imageUri, name } = route.params;
+  const { userId, imageUri, userName } = route.params;
   const navigation = useNavigation();
 
   const onDisplayPress = () => {
     console.log('aaa');
   }
 
-  const name = "Bryan Choi";
+  // const name = "Bryan Choi";
 
   // console.log("MyCoinScreen > userid : " + userId + " / imageUri : " + imageUri + " / name : " + name);
 
   return (
     <View style={styles.container}>
       <View onPress={onDisplayPress} style={styles.top} >
-        <Text style={styles.topUserId}>{name}</Text>
+        <Text style={styles.topUserId}>{userName}</Text>
         <View style={{flexDirection:'row'}}>
         <View style={styles.topCoinImage}>
           <FontAwesomeIcon name="coins" size={90} color="darkorange" />

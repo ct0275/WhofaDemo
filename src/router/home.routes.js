@@ -28,14 +28,14 @@ const HomeRoutes = ({route}) => {
   const navigation = useNavigation();
   
   const userId = '0';
-  const name = "Bryan choi";
+  const userName = "Bryan choi";
   const imageUri = "https://drive.google.com/uc?id=13d_h-NMu03WCqwiKzk9lejtv1P3KSNWb";
   const followType = "i";
   
-  console.log("router > home.routes > userid : " + userId + " / name : " + name + " / imageUri : " + imageUri + " route.name : " + route.name);
+  console.log("router > home.routes > userid : " + userName + " / name : " + userName + " / imageUri : " + imageUri + " route.name : " + route.name);
   
   const onProfilePress = () => {
-    navigation.navigate("Profile", { userId: userId, name: name, imageUri: imageUri, followType: followType });
+    navigation.navigate("Profile", { userId: userId, userName: userName, imageUri: imageUri, followType: followType });
   }
   
   return (
