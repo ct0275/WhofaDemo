@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet, Dimensions, Platform } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   dropdownWrap: {
     marginTop: 60, 
     height: 50,
+    zIndex: 100,
   },
   dropdown: {
     // backgroundColor: 'pink',
@@ -29,17 +30,15 @@ const styles = StyleSheet.create({
   },
   dropdownOpen: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height - 114,
-    opacity: 0.9,
+    height: Dimensions.get('window').height - (Platform.OS === 'ios' ? 126 : 114),
+    opacity: 0.8,
     backgroundColor: 'rgba(0,0,0,0.2)',
-    zIndex: 1,
   },
   dropdownClose: {
     width: Dimensions.get('window').width,
     // backgroundColor: 'rgba(0,0,0,0.2)',
     // height: Dimensions.get('window').height - 114,
     // opacity: 0.9,
-    zIndex: -1,
   },
   separator: {
     height: 1,

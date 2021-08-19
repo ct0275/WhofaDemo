@@ -122,7 +122,7 @@ const Feed = (props) => {
 
   return (
     <View style={styles.container}> 
-      <View>
+      <View style={{zIndex:2}}>
       { showDropdown }
       </View>
       <View>
