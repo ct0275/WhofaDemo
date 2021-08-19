@@ -22,7 +22,7 @@ export default [
       },
       videoUri: 'http://monweb.tving.com/trans/hylt.mp4',
       thumbnailUri : 'https://img.newspim.com/news/2020/06/29/2006290908499910.jpg',
-      caption: 'How you like that #Lalisa_Manobal #whosfasta #Home',
+      caption: 'How you like that #Lalisa_Manobal #whosfasta',
       likesCount: 1,
       postedAt: '2 minutes ago'
     },
@@ -165,7 +165,7 @@ export default [
       },
       videoUri: 'http://monweb.tving.com/trans/hylt.mp4',
       thumbnailUri : 'https://img.newspim.com/news/2020/06/29/2006290908499910.jpg',
-      caption: 'How you like that #Lalisa_Manobal #whosfasta #Home',
+      caption: 'How you like that #Lalisa_Manobal #whosfasta',
       likesCount: 1,
       postedAt: '2 minutes ago'
     },
