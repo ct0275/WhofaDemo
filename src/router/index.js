@@ -28,7 +28,8 @@ const Router = () => {
           name={"Home"}
           component={HomeScreen}
           options={{
-            headerShown: false
+            headerShown: false,
+            title: "홈으로",
           }}
         />
         <RootStack.Screen
