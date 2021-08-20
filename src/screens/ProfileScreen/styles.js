@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,14 +10,20 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
     // height: 600,
+    shadowOffset: {width: 2, height: 2},
+    shadowOpacity: 0.7,
+    // shadowRadius: 1,
+    shadowColor: '#000000',
   },
   topProfile: {
+    // backgroundColor: Colors.buttonSelected,
     elevation: 10,
+    borderColor: 'transparent',
     backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
     alignItems: 'center',
-    height: '75%',
+    height: '72%',
     // backgroundColor: "pink",
   },
   profilePicture: {
@@ -24,7 +31,7 @@ const styles = StyleSheet.create({
   },
   middleProfile: {
     alignItems: 'flex-start',
-    marginTop: 20,
+    marginTop: 10,
     // height: '25%',
     // backgroundColor: "yellow",
   },
