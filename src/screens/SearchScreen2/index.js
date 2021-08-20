@@ -132,12 +132,12 @@ const styles = StyleSheet.create({
     // alignSelf: 'flex-start',
     // marginRight: 40,
     marginLeft: 5,
-    marginTop: 5,
-    padding: 3,
+    marginTop: 10,
+    padding: 5,
     // backgroundColor: 'darkorange',
-    borderRadius: 7,
-    borderWidth: 1,
-    borderColor: 'pink',
+    borderRadius: 20,
+    borderWidth: 1.5,
+    borderColor: 'orange',
   },
 });
 
