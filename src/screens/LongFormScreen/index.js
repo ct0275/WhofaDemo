@@ -53,7 +53,7 @@ const LongFormScreen = ({route}) => {
               style={styles.topVideo}
               onError={(e) => console.log(e)}
               resizeMode={'cover'}
-              repeat={false}
+              repeat={true}
               pauseOnPress={true}
               autoplay={true}
             />

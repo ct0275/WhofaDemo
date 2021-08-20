@@ -34,7 +34,7 @@ const Body = (props) => {
           style={styles.videoShort}
           onError={(e) => console.log(e)}
           resizeMode={'cover'}
-          repeat={false}
+          repeat={true}
           // poster={post.thumbnailUri}
           // posterResizeMode={'cover'}
           paused={props.focusedIndex !== props.currentIndex}

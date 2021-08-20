@@ -46,7 +46,7 @@ const PostLarge = (props) => {
             style={styles.video}
             onError={(e) => console.log(e)}
             resizeMode={'cover'}
-            repeat={false}
+            repeat={true}
             paused={paused}
           />
           <View style={{position:'absolute', flexDirection:'row'}}>
