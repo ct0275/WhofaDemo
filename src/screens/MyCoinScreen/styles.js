@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     justifyContent: 'flex-start',
     // height: 600,
+    shadowOffset: {width: 2, height: 2},
+    shadowOpacity: 0.3,
+    // shadowRadius: 1,
+    shadowColor: '#000000',
   },
   top: {
     elevation: 10,
