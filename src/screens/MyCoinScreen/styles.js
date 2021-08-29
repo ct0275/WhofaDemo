@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
   top: {
     elevation: 10,
-    backgroundColor: "white",
+    // backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
     alignItems: 'center',
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   middleButton: {
     elevation: 10,
-    backgroundColor: "white",
+    // backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
     marginTop : 10,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   bottom: {
     marginTop: 15,
     elevation: 10,
-    backgroundColor: "white",
+    // backgroundColor: "white",
     // borderRadius: 10,
     // padding: 10,
     flex: 1,

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     fontWeight: 'bold',
-    color: '#3c3c3c'
+    color: 'gray'
   },
   topbar: {
     // backgroundColor: 'green',

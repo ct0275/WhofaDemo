@@ -2,17 +2,21 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import ProfilePicture from '../../components/ProfilePicture';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 
 import styles from './styles';
- 
+import { theme } from '../..//data/props';
+import { Dimensions } from 'react-native';
+
 const ProfileScreen = ({route}) => {
+
+  const { colors } = useTheme();
+  const bgcolor = (theme === 'dark' ? '#424242' : 'white');
 
   const { userId, userName, imageUri } = route.params;
 
   console.log("ProfileScreen > route.name : " + route.name + " / userId : " + userId + " / imageUri : " + imageUri + " / name : " + userName );
-
 
   const navigation = useNavigation();
 
@@ -32,55 +36,55 @@ const ProfileScreen = ({route}) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topProfile}>
+      <View style={[ styles.topProfile, {backgroundColor: bgcolor } ]}>
         <View style={styles.profilePicture}>
-        <ProfilePicture uri={imageUri} size={300} />
+          <ProfilePicture uri={imageUri} size={Dimensions.get('window').height * 0.37} />
         </View>
         <View style={styles.middleProfile}>
-          <Text style={styles.name}>{userName}</Text>
-          <Text style={styles.intro}>{intro}</Text>
-          <Text style={styles.hashtag}>{hashtag}</Text>
+          <Text style={[ styles.name, {color: colors.text} ]}>{userName}</Text>
+          <Text style={[ styles.intro, {color: colors.text} ]}>{intro}</Text>
+          <Text style={[ styles.hashtag]}>{hashtag}</Text>
+        </View>
       </View>
-    </View>
       
       <View style={styles.bottomProfile}>
-        <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={styles.editButton} >
-          <Text style={styles.displayText}>프로필 편집</Text>
+        <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={[ styles.editButton , {backgroundColor: bgcolor } ]} >
+          <Text style={[ styles.displayText, {color: colors.text} ]}>프로필 편집</Text>
         </TouchableOpacity>
       </View>
       {/* <Text/> */}
 
       <View style={styles.infoContainer}>
         <View>
-          <TouchableOpacity onPress={() => onDisplayPress("Follow", "i")} style={styles.displayButton} >
-            <Text style={styles.displayText}>{following}{"\n"}팔로잉</Text>
+          <TouchableOpacity onPress={() => onDisplayPress("Follow", "i")} style={[ styles.displayButton, {backgroundColor: bgcolor } ]} >
+            <Text style={[ styles.displayText , {color: colors.text} ]}>{following}{"\n"}팔로잉</Text>
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity onPress={() => onDisplayPress("Follow", "r")} style={styles.displayButton} >
-            <Text style={styles.displayText}>{follower}{"\n"}팔로워</Text>
+          <TouchableOpacity onPress={() => onDisplayPress("Follow", "r")} style={[ styles.displayButton, {backgroundColor: bgcolor } ]} >
+            <Text style={[ styles.displayText, {color: colors.text} ]}>{follower}{"\n"}팔로워</Text>
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity onPress={() => onDisplayPress("MyCoin")} style={styles.displayButton} >
-            <Text style={styles.displayText}>{myCoin}{"\n"}후파코인</Text>
+          <TouchableOpacity onPress={() => onDisplayPress("MyCoin")} style={[ styles.displayButton, {backgroundColor: bgcolor } ]} >
+            <Text style={[ styles.displayText, {color: colors.text} ]}>{myCoin}{"\n"}후파코인</Text>
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.infoContainer}>
       <View>
-        <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={styles.displayButton} >
-            <Text style={styles.displayText}>{2}{"\n"}콘서트</Text>
+        <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={[ styles.displayButton, {backgroundColor: bgcolor } ]} >
+            <Text style={[ styles.displayText, {color: colors.text} ]}>{2}{"\n"}콘서트</Text>
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={styles.displayButton} >
-            <Text style={styles.displayText}>{25}{"\n"}내 동영상</Text>
+          <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={[ styles.displayButton, {backgroundColor: bgcolor } ]} >
+            <Text style={[ styles.displayText, {color: colors.text} ]}>{25}{"\n"}내 동영상</Text>
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={styles.displayButton} >
-            <Text style={styles.displayText}>{170}{"\n"}펜레터</Text>
+          <TouchableOpacity onPress={() => onDisplayPress("MyVideo")} style={[ styles.displayButton, {backgroundColor: bgcolor } ]} >
+            <Text style={[ styles.displayText, {color: colors.text} ]}>{170}{"\n"}펜레터</Text>
           </TouchableOpacity>
         </View>
       </View>

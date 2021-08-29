@@ -1,18 +1,19 @@
 import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { MenuProvider } from 'react-native-popup-menu';
-
+import { TouchableOpacity } from 'react-native';
 import StoryScreen from "../components/Story";
 import LoginScreen from "../components/Login";
 import HomeScreen from './bottomHomeNavigator.routes';
 import RankScreen from "../screens/RankScreen";
+import AlarmScreen from "../screens/AlarmScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import MyVideoScreen from "../screens/MyVideoScreen";
 import MyCoinScreen from "../screens/MyCoinScreen";
 import CommentScreen from "../screens/CommentScreen";
 import FollowScreen from "../screens/FollowScreen";
 import LongFormScreen from "../screens/LongFormScreen";
-
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 import {Platform} from 'react-native';
 
 const RootStack = createStackNavigator();
@@ -39,7 +40,19 @@ const Router = () => {
             headerShown: false
           }}
         />
-
+        <RootStack.Screen
+          name={"Alarm"}
+          component={AlarmScreen}
+          options={{
+            headerShown: true,
+            title: "알람",
+            headerRight: () => (
+              <TouchableOpacity>
+              <FontAwesome name="bars" size={25} style={{marginRight: 10}}/>
+              </TouchableOpacity>
+            ),
+          }}
+        />
         <RootStack.Screen
           name={"Profile"}
           component={ProfileScreen}
@@ -50,7 +63,9 @@ const Router = () => {
                 title: "프로파일",
               },
               android: {
-                headerShown: false,
+                // headerShown: false,
+                headerShown: true,
+                title: "프로파일",
               },
             }),
 

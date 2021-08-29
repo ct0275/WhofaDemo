@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   rightIcons: {
     zIndex : 1,
     flexDirection: 'row',
-    width: 80,
+    width: 70,
     position: 'absolute',
     right: 0,
     justifyContent: 'space-between',

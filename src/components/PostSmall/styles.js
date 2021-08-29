@@ -4,10 +4,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  header: {
-    // height:1,
-    backgroundColor:'orange',
-  },
   footer: {
     flexDirection: 'row',
     height: 1,
@@ -40,12 +36,15 @@ const styles = StyleSheet.create({
   profile: {
     width: 60,
     height: 60,
-    borderRadius: 30,
-    marginTop: 10,
+    borderRadius: 10,
+    borderWidth: 2,
+    margin: 10,
+    // elevation: 10,
   },
   thumbnail: {
-    width: 100,
-    height: 100,
+    margin: 5,
+    width: 75,
+    height: 75,
   },
   name: {
     // paddingLeft: 5,

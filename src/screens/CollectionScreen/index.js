@@ -5,10 +5,13 @@ import data from "../../data/home.js";
 import Post from "../../components/PostSimple";
 import styles from './styles';
 import Stories from '../../components/Stories';
+import { useTheme } from '@react-navigation/native';
 
 const CollectionScreen = ({route}) => {
   
   console.log("SearchScreen > route.name : " + route.name + " / wuFrom : " + route.wuFrom + ", period : " + route.period);
+
+  const { colors } = useTheme();
 
   const flatlistConfig = {
     itemVisiblePercentThreshold: 30,
@@ -18,8 +21,8 @@ const CollectionScreen = ({route}) => {
 
   return (
     <View style={styles.background}> 
-      <Text style={styles.headline_text}>Video Collection </Text>
-      <Text style={styles.explore_text}>Still listening, good Lord, this little Korean girl can really sing.</Text>
+      <Text style={[ styles.headline_text, {color: colors.text} ]}>Video Collection </Text>
+      <Text style={[ styles.explore_text, {color: colors.text} ]}>Still listening, good Lord, this little Korean girl can really sing.</Text>
       <View>
           <Stories></Stories>
       </View>

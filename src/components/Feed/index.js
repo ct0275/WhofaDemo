@@ -13,11 +13,19 @@ import dummyMonthlyRank from "../../data/rankm.js";
 
 import DropDownPicker from 'react-native-dropdown-picker';
 
+import { useColorScheme } from 'react-native-appearance';
+
 import styles from './styles';
+
+import { theme } from '../../data/props';
 
 const Feed = (props) => {
   
-  console.log("components > Feed > wuFrom : " + props.wuFrom + ", period : " + props.period);
+  console.log("components > Feed > wuFrom : " + props.wuFrom + ", period : " + props.period + ", height: " + Dimensions.get('window').height);
+
+  // const scheme = useColorScheme();
+  //강제다크모드설정
+  const scheme = theme;
 
   const flatlistConfig = {
     // maxToRenderPerBatch: 5,
@@ -53,36 +61,48 @@ const Feed = (props) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('all');
   const [items, setItems] = useState([
-    {label: '전체', value: 'all'},
-    {label: '노래', value: 'sing'},
-    {label: '발라드', value: 's1', parent: 'sing'},
-    {label: '댄스', value: 's2', parent: 'sing'},
-    {label: '랩', value: 's3', parent: 'sing'},
-    {label: 'R&B', value: 's4', parent: 'sing'},
-    {label: '인디', value: 's5', parent: 'sing'},
-    {label: '락앤롤', value: 's6', parent: 'sing'},
-    {label: '트로트', value: 's7', parent: 'sing'},
-    {label: '블루스', value: 's8', parent: 'sing'},
-    {label: '댄스', value: 'dance'},
-    {label: '힙합', value: 'd1', parent: 'dance'},
-    {label: '프리', value: 'd2', parent: 'dance'},
-    {label: '연주', value: 'play'},
-    {label: '랩', value: 'rap'},
-    {label: '소리', value: 'asmr'},
-    {label: '개그', value: 'gag'},
-
     // {label: '전체', value: 'all'},
+    // {label: 'NEW', value: 'new'}, 
     // {label: '노래', value: 'sing'},
+    // {label: '발라드', value: 's1', parent: 'sing'},
+    // {label: '댄스', value: 's2', parent: 'sing'},
+    // {label: '랩', value: 's3', parent: 'sing'},
+    // {label: 'R&B', value: 's4', parent: 'sing'},
+    // {label: '인디', value: 's5', parent: 'sing'},
+    // {label: '락앤롤', value: 's6', parent: 'sing'},
+    // {label: '트로트', value: 's7', parent: 'sing'},
+    // {label: '블루스', value: 's8', parent: 'sing'},
     // {label: '댄스', value: 'dance'},
+    // {label: '힙합', value: 'd1', parent: 'dance'},
+    // {label: '프리', value: 'd2', parent: 'dance'},
     // {label: '연주', value: 'play'},
     // {label: '랩', value: 'rap'},
-    // {label: '소리', value: 'asmr'},
-    // {label: '개그', value: 'gag'},
+    // {label: '연예', value: 'enter'},
+
+    {label: '전체', value: 'all'},
+    {label: 'NEW', value: 'new'}, 
+    {label: '노래', value: 'sing'}, 
+    {label: '댄스', value: 'dance'},
+    {label: '연주', value: 'play'},
+    {label: '연예', value: 'enter'},
+    {label: '', value: 'a1'},
+    {label: '', value: 'a2'},
+    {label: '', value: 'a3'},
+    {label: '', value: 'a4'},
+    {label: '', value: 'a5'},
+    {label: '', value: 'a6'},
+    {label: '', value: 'a7'},
+    {label: '', value: 'a8'},
+    {label: '', value: 'a9'},
+    {label: '', value: 'b1'},
+    {label: '', value: 'b2'},
+    {label: '', value: 'b3'},
+    {label: '', value: 'b4'},
   ]);
 
   const showDropdown = props.wuFrom === "Rank" ? (<View style={styles.dropdownWrap}>
     <DropDownPicker
-      style={styles.dropdown}
+      style={scheme === 'dark' ? styles.dropdown : styles.dropdown}
       // disabledStyle={{
       //   opacity: 0.3
       // }}
@@ -96,16 +116,17 @@ const Feed = (props) => {
       setOpen={setOpen}
       setValue={setValue}
       setItems={setItems}
-      maxHeight={Dimensions.get('window').height}
+      maxHeight={Dimensions.get('window').height - 140}
+      // maxHeight={400}
       modalProps={{
         animationType: "fade"
       }}
-      // theme="DARK"  // DARK    LIGHT
+      theme={scheme === 'dark' ? "DARK" : "LIGHT"}  // DARK    LIGHT
       listMode="FLATLIST"  // DEFAULT     FLATLIST     SCROLLVIEW     MODAL
       // searchable={true}
       // multiple={true}
-      // min={0}
-      // max={25}
+      min={0}
+      max={25}
       onChangeValue={(value) => {
         console.log(value);
       }}

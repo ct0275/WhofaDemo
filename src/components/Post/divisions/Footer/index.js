@@ -4,13 +4,16 @@ import ADIcon from 'react-native-vector-icons/AntDesign';
 import FontistoIcon from 'react-native-vector-icons/Fontisto';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import IoniconsIcon from 'react-native-vector-icons/Ionicons';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome5'
+import Octicons from 'react-native-vector-icons/Octicons'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import styles from "./styles";
 
 const Footer = ({likesCount: likesCountProp, caption, postedAt}) => {
+
+  const { colors } = useTheme();
 
   const [isLiked, setIsLike] = useState(false);
   const [likesCount, setLikesCount] = useState(0);
@@ -43,19 +46,17 @@ const Footer = ({likesCount: likesCountProp, caption, postedAt}) => {
         <View style={styles.rightIcons}>
           <TouchableOpacity onPress={onLikePressed}>
             {isLiked ?
-              <ADIcon name="star" size={35} color={"#ea8041"} />
-              : <ADIcon name="staro" size={35} color={"#545454"} />
+              <FontAwesome name="star" size={30} color={"darkorange"} />
+              : <FontAwesome name="star-o" size={30} color={"#424242"} />
             }
           </TouchableOpacity>
-
           <TouchableOpacity onPress={onCommentPressed}>
-            <FontistoIcon name="commenting" size={30} color={"#545454"}/>
+            <Octicons name="comment" size={28} color={colors.text}/>
           </TouchableOpacity>
-
         </View>
-        <Text style={styles.likes}>{likesCount} Likes</Text>
-      <Text style={styles.caption}>{caption}</Text>
-      <Text style={styles.postedAt}>{postedAt}</Text>
+        <Text style={[ styles.likes, {color: colors.text} ]}>{likesCount} Likes</Text>
+        <Text style={[ styles.caption, {color: colors.text} ]}>{caption}</Text>
+        <Text style={[ styles.postedAt, {color: colors.text} ]}>{postedAt}</Text>
       </View>
 
 

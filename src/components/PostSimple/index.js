@@ -15,7 +15,15 @@ const PostSimple = (props) => {
   const navigation = useNavigation();
 
   const onVideoPress = () => {
-    navigation.navigate("LongForm", {userId: post.user.id, userName: post.user.name, imageUri: post.user.imageUri,  postId: post.id, videoUri: post.videoUri, thumbnailUri: post.thumbnailUri });
+    navigation.navigate("LongForm", {userId: post.user.id,
+       userName: post.user.name,
+       imageUri: post.user.imageUri,  
+       postId: post.id, 
+       videoUri: post.videoUri, 
+       thumbnailUri: post.thumbnailUri,
+       postedAt: post.postedAt,
+       likesCount: post.likesCount,
+    });
   }
 
   return (

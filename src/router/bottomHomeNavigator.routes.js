@@ -20,11 +20,11 @@ const BottomHomeNavigator = () => (
     screenOptions={({ route }) => ({
       tabBarIcon: ({ focused, color, size }) => {
         if (route.name === 'Home') {
-          return <Foundation name="home" size={size} color={color} />;
+          return <Foundation name="home" size={30} color={color} />;
         }
         if (route.name === 'Rank') {
           // return <Foundation name="crown" size={size} color={color} />;
-          return <FontAwesome5 name="crown" size={20} color={color} />;
+          return <Foundation name="crown" size={30} color={color} />;
         }
         if (route.name === 'Post') {
           return <Feather name="mic" size={30} color={color} />;
@@ -36,12 +36,12 @@ const BottomHomeNavigator = () => (
           return <MaterialIcons name="video-collection" size={size} color={color} />;
         }
         if (route.name === 'MyImage') {
-          return <MaterialCommunityIcons name="animation-play-outline" size={size} color={color} />;
+          return <FontAwesome name="bookmark" size={size} color={color} />;
         }
       },
     })}
     tabBarOptions={{
-      activeTintColor: 'orange',
+      activeTintColor: 'darkorange',
       // inactiveTintColor: 'gray',
       // showLabel: false,
     }}

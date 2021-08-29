@@ -11,6 +11,7 @@ import { StatusBar } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance';
 import Router from './router';
+import { theme } from './data/props';
 
 import SplashScreen from 'react-native-splash-screen';
 
@@ -24,7 +25,12 @@ const App: () => React$Node = () => {
     }, 10);
   }, []);
 
-  const scheme = useColorScheme();
+  // const scheme = useColorScheme();
+  //강제다크모드설정
+  const scheme = theme;
+  console.log(scheme);
+  console.log(scheme);
+
   return (
     <AppearanceProvider>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>

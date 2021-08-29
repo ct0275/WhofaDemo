@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
   },
   dropdownOpen: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height - (Platform.OS === 'ios' ? 121 : -41),
+    // height: Dimensions.get('window').height - (Platform.OS === 'ios' ? 121 : -41),
+    height: Dimensions.get('window').height,
     opacity: 0.9,
     // backgroundColor: 'rgba(0,0,0,0.2)',
     zIndex: 1,

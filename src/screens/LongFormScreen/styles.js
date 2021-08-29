@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
   top: {
     // elevation: 10,
-    backgroundColor: "white",
+    // backgroundColor: "white",
     borderRadius: 10,
     // padding: 10,
     alignItems: 'center',
@@ -29,13 +29,13 @@ const styles = StyleSheet.create({
     left: 0,
     bottom: 0,
     right: 0,
-    borderRadius: 5,
+    borderRadius: 10,
   },
   bottom: {
     flex: 1,
     // marginTop: 10,
     elevation: 10,
-    backgroundColor: "white",
+    // backgroundColor: "white",
   },  
   bottomContainer: {
     flex: 1,

@@ -11,6 +11,8 @@ const Body = (props) => {
   console.log("components > Post > Body > currentIndex : " + props.currentIndex + " / focusedIndex : " + props.focusedIndex);
   // console.log("components > Post > Body > videoUri : " + props.videoUri);
 
+  // const { colors } = useTheme();
+
   const [paused, setPaused] = useState(true);
   const [post, setPost] = useState(props.post);
 
@@ -19,7 +21,15 @@ const Body = (props) => {
   const onVideoPress = () => {
     console.log('Click');
     setPaused(!paused);
-    navigation.navigate("LongForm", {userId: post.user.id, userName: post.user.name, imageUri: post.user.imageUri,  postId: post.id, videoUri: post.videoUri, thumbnailUri: post.thumbnailUri });
+    navigation.navigate("LongForm", {userId: post.user.id,
+       userName: post.user.name, 
+       imageUri: post.user.imageUri,  
+       postId: post.id, 
+       videoUri: post.videoUri, 
+       thumbnailUri: post.thumbnailUri,
+       postedAt: post.postedAt,
+       likesCount: post.likesCount,
+    });
   };
 
   const renderPoster = (props.focusedIndex !== props.currentIndex) ? (

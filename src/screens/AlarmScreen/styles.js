@@ -4,12 +4,12 @@ const styles = StyleSheet.create({
     container: {
       // paddingLeft: 10,
       paddingRight: 16,
-      paddingVertical: 12,
+      paddingVertical: 5,
       flexDirection: 'row',
       alignItems: 'flex-start'
     },
     root: {
-      // backgroundColor: "#ffffff",
+      backgroundColor: "#ffffff",
       marginTop:10,
     },
     content: {

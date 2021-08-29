@@ -3,7 +3,7 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
   container: {
-    // marginTop: 10,
+    marginTop: 5,
     padding: 5,
     // flex: 1,
     flexDirection: 'column', 
@@ -19,15 +19,16 @@ const styles = StyleSheet.create({
     // backgroundColor: Colors.buttonSelected,
     elevation: 10,
     borderColor: 'transparent',
-    backgroundColor: "white",
+    // backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
     alignItems: 'center',
-    height: '72%',
+    height: '75%',
     // backgroundColor: "pink",
   },
   profilePicture: {
-    // marginTop: 10,
+    marginTop: 10,
+    // height: '75%'
   },
   middleProfile: {
     alignItems: 'flex-start',
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   },
   hashtag: {
     marginTop: 5,
-    color: "#ea8041",
+    color: "orange",
     textAlign: 'left',
     fontWeight: 'normal',
   },
@@ -64,17 +65,18 @@ const styles = StyleSheet.create({
   },
   editButton: {
     elevation: 10,
-    backgroundColor: "white",
+    // backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
   },
   displayButton: {
     elevation: 10,
-    backgroundColor: "white",
+    // backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
     width: 120,
     marginTop: 10,
+    height: 50,
   },
   displayText: {
     textAlign: 'center',
